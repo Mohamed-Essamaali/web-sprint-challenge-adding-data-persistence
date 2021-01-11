@@ -1,12 +1,12 @@
 // build your `Resource` model here
 const db  = require('../../data/dbConfig')
 
-const getresources = ()=>{
+const getResources = ()=>{
     return db('resources')
 }
 
 const getResourceById = id=>{
-    return db('resources').where('id',id)
+    return db('resources').where('id',id).first()
 }
 
 const addResources = newResource =>{
@@ -15,4 +15,4 @@ const addResources = newResource =>{
 
 
 
-module.exports = {getresources,getResourceById,addResources}
+module.exports = {getResources,getResourceById,addResources}
