@@ -8,7 +8,7 @@ const getTasks = ()=>{
 }
 
 const getTaskById = id=>{
-    return db('tasks').where('id',id)
+    return db('tasks').where('id',id).first()
 }
 
 const addTask = (newTask,project_id) =>{
